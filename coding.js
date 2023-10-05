@@ -234,3 +234,8 @@ let getExtension = filename.slice(filename.indexOf('.'));
 // 7. `charAt()`, `charCodeAt()`, `substring()`, and `substr()`: These string methods can be used to access or manipulate individual characters or substrings within a string.
 
 // These methods are versatile and can be used on both arrays and strings, making JavaScript a flexible and powerful language for working with data.
+
+
+
+
+//interesting thing to know is that if u apply .split('') method on a string it actually convert that string into an array (of character) and then you can apply all the array's method..
