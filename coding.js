@@ -1,14 +1,14 @@
 
 // https://www.codecademy.com/resources/blog/10-javascript-code-challenges-for-beginners/
 
-let A = [1,2,3,4,5];
-let B = A.map((value)=>{
-   return value*2;
+let A = [1, 2, 3, 4, 5];
+let B = A.map((value) => {
+   return value * 2;
 })
 
 
 // 1. print even numbers
-let C = A.filter((number)=>{
+let C = A.filter((number) => {
    return number % 2 == 0;
 })
 
@@ -23,13 +23,13 @@ let C = A.filter((number)=>{
 
 // Like Challenge #1, can you create an efficient solution that you could easily expand should you need the 12 times table?
 
-function createMultiplicationTable(maxNum){
-for(let i = 1; i<maxNum; i++){
-   for(let j = 1 ; j <=10 ;j++){
-      let product = j*i;
-      console.log(`${i} * ${j} = ${product}`);
+function createMultiplicationTable(maxNum) {
+   for (let i = 1; i < maxNum; i++) {
+      for (let j = 1; j <= 10; j++) {
+         let product = j * i;
+         console.log(`${i} * ${j} = ${product}`);
+      }
    }
-}
 }
 // createMultiplicationTable(4);
 
@@ -42,9 +42,9 @@ for(let i = 1; i<maxNum; i++){
 // Let’s start with a conversion from kilometers to miles. The function should include the input in kilometers and return the answer in miles.
 
 
-function kilometersToMiles(kilometers){
-let miles = (kilometers/1.6);
-return miles;
+function kilometersToMiles(kilometers) {
+   let miles = (kilometers / 1.6);
+   return miles;
 }
 //const Miles = kilometersToMiles(4);
 // console.log(`${kilometersToMiles(4)}`);
@@ -55,22 +55,22 @@ return miles;
 // 4. Calculate the sum of numbers within an array
 // You can create your own array of numbers but consider trying this problem with a few different sets to verify your solution. Have one array with negative and positive numbers and another with integers and decimals.
 
-let Numbers = [1,2,3,4,5,6,7,8,9];
+let Numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 let sum = 0;
-for(let i = 0 ; i < Numbers.length; i++){
-sum += Numbers[i];
+for (let i = 0; i < Numbers.length; i++) {
+   sum += Numbers[i];
 }
 // console.log(sum);
 
 
 
 // two Dimensional Arrays (array with in array) the inner array are considered as a single element for parent array;
-let Array2D = [[1,2,3],[4,5,6],[6,7,8]];
+let Array2D = [[1, 2, 3], [4, 5, 6], [6, 7, 8]];
 let innerArray = Array2D[2];
 let innerSum = 0;
-for(i=0;i<innerArray.length;i++){
-innerSum = innerSum+ innerArray[i];
+for (i = 0; i < innerArray.length; i++) {
+   innerSum = innerSum + innerArray[i];
 }
 // console.log(innerArray);
 // console.log(`inner array sum = ${innerSum}`);
@@ -102,8 +102,8 @@ const innerValue = Array2D[2][1];
 // This challenge is particularly helpful if you’re planning to become a Data Scientist. Manipulating data is a significant part of the role, and building the foundations now will help you later down the road when you’re working with large databases.
 // Start small here and work your way up. Begin with an array of 5 numbers, and then try your program with a larger array to verify its success.
 let arrlength = Numbers.length;
-for(i=arrlength ; i>0 ; i--){
-   console.log(Numbers[i-1]);
+for (i = arrlength; i > 0; i--) {
+   console.log(Numbers[i - 1]);
 }
 
 
@@ -112,7 +112,7 @@ for(i=arrlength ; i>0 ; i--){
 
 // Sort an array from lowest to highest
 // You could create a function for this solution as well, but be sure to try your program with varying lengths and types of arrays. Try one with all integers, another with negative numbers, and another with decimals.
-let unsortedArray = [4,1,3,8,5,7,2];
+let unsortedArray = [4, 1, 3, 8, 5, 7, 2];
 let sorted = unsortedArray.sort();
 console.log(sorted);
 
@@ -120,11 +120,11 @@ console.log(sorted);
 
 // Create a function that filters out negative numbers
 // In this challenge, you’ll have a function that takes an array as an input and returns an array. But if all goes according to plan, it’ll remove the negative numbers. This is another example of a task that’ll be useful when combing through data and looking for clever ways to eliminate “bad data.”
-let integersArray = [1,2,-3,-5,6,-4];
-let posNumbers = integersArray.filter((number)=>{
-  if(number>=0){
-   return number;
-  }
+let integersArray = [1, 2, -3, -5, 6, -4];
+let posNumbers = integersArray.filter((number) => {
+   if (number >= 0) {
+      return number;
+   }
 })
 console.log(posNumbers);
 
@@ -151,7 +151,7 @@ console.log(posNumbers);
 // You could scale this function to clean up specific fields of data, such as zip codes.
 
 let inputString = 'hello ,   world';
-let newInputString = inputString.replace(/\s/g,'');
+let newInputString = inputString.replace(/\s/g, '');
 console.log(inputString);
 console.log(newInputString);
 
@@ -162,8 +162,8 @@ console.log(newInputString);
 // Here, you’ll create a function that’ll give you a “true” or “false” Boolean as its output. 
 //The inputted number should only return a “true” if it’s divisible by 10. Otherwise, your program should return a “false” answer.
 
-function isDivisibleBy10 (number){
-return number % 10 == 0;
+function isDivisibleBy10(number) {
+   return number % 10 == 0;
 }
 console.log(isDivisibleBy10(40));
 
@@ -177,7 +177,6 @@ console.log(isDivisibleBy10(40));
 //If you feel like an extra challenge, consider returning the number of characters.
 
 let animal = 'elephant';
-let strLength =  animal.length;
 //console.log(animal[4]) 
 // While strings in JavaScript are indeed sequences of characters, they are not considered arrays.
 // Arrays and strings have some similarities, such as the ability 
@@ -187,12 +186,25 @@ let strLength =  animal.length;
 // now lets collect all the vowels in the animal string ,
 let vowels = '';
 for (let i = 0; i < animal.length; i++) {
-    let character = animal[i];
-    if ('aeiou'.includes(character) && !vowels.includes(character)) {
-        vowels += character;
-    }
+   let character = animal[i];
+   if ('aeiou'.includes(character) && !vowels.includes(character)) {
+      vowels += character;
+   }
 }
+console.log(vowels, vowels.length); // This will output 'ea' for the word 'elephant'.
 
-console.log(vowels , vowels.length); // This will output 'ea' for the word 'elephant'.
+
+
+
+
+// write a javascript program to get the file extension
+//the slice work on string and arrays , slice return an Array or String which contain the elements starting from index that has beeen passed to the slice as an argument e.g slice('6');
+let evenArray = [2, 4, 6, 8];
+console.log(evenArray.slice(evenArray.indexOf(6)));
+
+let filename = 'index.html';
+let getExtension = filename.slice(filename.indexOf('.'));
+console.log(getExtension);
+
 
 
