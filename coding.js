@@ -205,7 +205,8 @@ for (let i = 0; i < animal.length; i++) {
 
 
 
-//12.  write a javascript program to get the file extension
+//source: (channel - codebubb -> JavaScript Practice Exercises For Beginners: Beginner Exercises Part 1)
+//12.  write a javascript program to get the file extension 
 //the slice work on string and arrays , slice return an Array or String which contain the elements starting from index that has beeen passed to the slice as an argument e.g slice('6');
 let evenArray = [2, 4, 6, 8];
 // console.log(evenArray.slice(evenArray.indexOf(6)));
@@ -214,6 +215,86 @@ let filename = 'index.html';
 let getExtension = filename.slice(filename.indexOf('.'));
 // console.log(getExtension);
 
+
+// let person = 'hashir';
+// let obj = {};
+// for(let i=0;i<person.length;i++){
+// let Alp = person[i];
+// if(obj[Alp]){
+//    obj[Alp] = obj[Alp] + 1;
+// }
+// else{
+//    obj[Alp]=1;
+// }
+// }
+// console.log(obj);
+ 
+// let numbArray = [1,2,1,4,5,7,6];
+// let repArray = [];
+// let nonrepArray = [];
+// // let counter = {};
+// for(let i = 0; i<numbArray.length;i++){
+//    let temp = numbArray[i];
+// for (let j=i+1;i<numbArray.length;j++){
+// if(temp == numbArray[j]){
+// repArray.push(temp);
+// }
+// }
+// }
+
+
+
+// let object = {
+//    name:'Abdur',
+//    age:15
+// };
+// console.log(object['name']); // it is used to access the name within object just like object.name or can create a new keyValue pair;
+
+// object ['city'] = 'peshawar';
+
+// console.log(object);
+
+
+
+// modifying the value at the last index of the array is allowed because const in JavaScript does not provide immutability for arrays or objects themselves, only for the variable that holds the reference to them.
+const nums = [10,20,30];
+let arrayLength =nums.length;
+nums[arrayLength-1] = 99;
+
+function returnLAstIndex (array) {
+return (array[array.length-1])
+}
+console.log('Last Index: '+ returnLAstIndex(nums));
+
+function firstAndLastSwapped( array){
+   let firstTemp = array[0];
+   let lastTemp = array[array.length-1];
+   array[0]=lastTemp;
+   array[array.length-1]=firstTemp;
+   return array;
+}
+console.log('SwapIndexes: '+ firstAndLastSwapped(nums));
+
+
+
+
+
+
+let numArray = [4,1,2,6,3,5]; 
+function minMax (nums){
+let min = nums[0];
+let max = nums[0];
+for(let i = 0; i < nums.length;i++){
+if( nums[i]< min){
+  min = nums[i];
+}
+if( nums[i]> max){
+   max = nums[i];
+ }
+}
+console.log(min, max);
+ }
+minMax(numArray);
 
 
 
