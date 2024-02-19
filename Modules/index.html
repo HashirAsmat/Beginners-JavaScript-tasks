@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     
@@ -13,6 +14,6 @@
 
 <!-- as the HTML page is loaded the JS file in the script tag are executed automatically , the order does not matter if its type is module otherwise the order of JS script files are really important  -->
 <script  type="module" src="./amazon.js"></script>
-<script type="module" src="./product.js"></script>
+<!-- <script type="module" src="./product.js"></script> you can just remove the script tag from and load products variable array in to the amazon.js file from importing it from product.js , so we will mainly have 1 script JS file per html page , the rest of the JS file will be available but not in the html page , we will just import and export codes from there to the desire file  -->
 </body>
 </html>
