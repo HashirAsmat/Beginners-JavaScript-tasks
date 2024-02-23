@@ -9,11 +9,37 @@
 <body>
     
 
+<button class="js-add-to-cart" data-productid="mouse" >mouse (Add to Cart)</button>
+<button class="js-add-to-cart" data-productid="fish" >fish (Add to Cart)</button>
+<button class="js-add-to-cart" data-productid="keyboard" >keyboard (Add to Cart)</button>
+<button class="js-add-to-cart" data-productid="soap" >soap (Add to Cart)</button>
+
 
 
 
 <!-- as the HTML page is loaded the JS file in the script tag are executed automatically , the order does not matter if its type is module otherwise the order of JS script files are really important  -->
 <script  type="module" src="./amazon.js"></script>
+
+
 <!-- <script type="module" src="./product.js"></script> you can just remove the script tag from and load products variable array in to the amazon.js file from importing it from product.js , so we will mainly have 1 script JS file per html page , the rest of the JS file will be available but not in the html page , we will just import and export codes from there to the desire file  -->
 </body>
 </html>
+
+
+
+
+<!-- 
+dataset:
+The dataset property of an element allows you to access custom data attributes (attributes that begin with data-) set on that element. It returns a DOMStringMap object containing all the custom data attributes.
+
+
+
+productid: 
+This is a specific data attribute. In this case, it refers to a custom attribute named data-productid set on the button element.
+(visit -> cart.js file to look for the code of -> button.dataset.productid)
+So, button.dataset.productid retrieves the value of the data-productid attribute set on the button element. 
+
+If you have an HTML button like this:
+html
+Copy code
+<button id="myButton" data-productid="123">Click me</button> -->

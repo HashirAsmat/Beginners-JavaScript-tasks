@@ -42,9 +42,46 @@ setTimeout(()=>{
 
 
 
+let cart = [];
+let allButtons = document.querySelectorAll(".js-add-to-cart").forEach((button)=>{
+       button.addEventListener('click',()=>{
+        let productid = button.dataset.productid;
+        console.log(productid);
+        let cartproduct;
+       let addedFalg = false;
+        cart.forEach((value,index)=>{
+
+          if (value.productid == productid){
+            console.log("found match");
+            cartproduct = value;
+            cartproduct.quantity =value.quantity+1;
+            console.log('CART PRODUCT AFTER MATCHING',cartproduct);
+            cart[index] = cartproduct;
+            addedFalg = true
+          }  
+        }
+        )    
+        if(addedFalg){
+          return;
+        }
+      cartproduct = {productid,quantity:1}
+      cart.push(cartproduct);
+        console.log('this is my cart',cart);
+       })
+})            
 
 
 
 
 
 // Dont run those js frontend files through node where u are using (js file type='module' in HTML FILE) i.e Export or import statements , other than that u can run frontend JS files though node for debugging purposes...
+
+
+
+
+
+// let say we have a cart , and we want to add items into the cart but 
+
+// 1- before adding it we must make sure whether that item is already present in the cart array or not .
+// 2- if present then we need to incerment its quantity 
+// 3- if not then we need to add it to the cart and set it quanitity to one... 
