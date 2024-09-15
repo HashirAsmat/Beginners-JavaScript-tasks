@@ -113,3 +113,7 @@ for(let i =0;i<randomSpelling.length;i++){
     }
 }
 console.log(objectVowelsCounter);
+
+
+
+

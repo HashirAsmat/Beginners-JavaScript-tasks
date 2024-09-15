@@ -32,8 +32,6 @@ getdata = first20Items;
 //console.log(getdata, 'Using Varibale');
 }
 
-
-
 //You can use setTimeout to verify that out getdata variable is assigned with the data but later on , setTimeout is set to executed after 3 seconds , so it is executed much later , at the last , even later that async functions because 3 seconds delay is alot , our data is fetched earlier than 3 seconds by the async function so that why we can access the variable to ensure if its is assign with the fetched data or not.... 
 setTimeout(()=>{
     console.log('set time out executed! ',getdata);
@@ -50,10 +48,9 @@ let allButtons = document.querySelectorAll(".js-add-to-cart").forEach((button)=>
         let cartproduct;
        let addedFalg = false;
         cart.forEach((value,index)=>{
-
           if (value.productid == productid){
             console.log("found match");
-            cartproduct = value;
+            cartproduct = value; //assign the cart object to the cartproduct , just increment its quantity
             cartproduct.quantity =value.quantity+1;
             console.log('CART PRODUCT AFTER MATCHING',cartproduct);
             cart[index] = cartproduct;
