@@ -97,7 +97,7 @@ const variableStoringFunction = () =>{
 
 
 /////////////// forEach ---> (loop) function
-//forEach  is a function that we use on an arrays or objects , and it iterate the array (visiting each index and its value) sometimes we use for loop and arraylength for arrays traversing so instead of using forloop we can simple use forEach method , makes it much more simple to traverse the array , it does not return new array like .map( ) or .filter() , it's just like a forLoop instead...
+//forEach  is a function that we use on an arrays or objects or NodeList, and it iterate the array (visiting each index and its value) sometimes we use for loop and arraylength for arrays traversing so instead of using forloop we can simple use forEach method , makes it much more simple to traverse the array , it does not return new array like .map( ) or .filter() , it's just like a forLoop instead...
 let fruits = ['banana','apple','mango','orange'];
 console.log(fruits,'before change');
 fruits.forEach((value,index)=>{

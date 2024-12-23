@@ -1,0 +1,237 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Alternating Layout</title>
+  <style>
+    /* Parent Section */
+    .parent {
+      display: flex;
+      flex-direction: column;
+      gap: 6rem; /* Space between child sections */
+      margin: 0 auto;
+      width: 75%; /* Parent width */
+      margin-top: 80px;
+      padding: 40px;
+    }
+
+    /* General Child Section Styling */
+    .child {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%; /* Child takes full width of parent */
+      gap: 5rem; /* Space between image and text sections */
+    }
+
+    /* Alternate Layout: Reverse Direction for Even Children */
+    .child:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    /* Image Section Styling */
+    .image-section {
+      width: 45%; /* Image section width */
+      height: 350px; /* Fixed height for image container */
+    
+    }
+
+    .image-section img {
+      width: 100%; /* Make image fill its container */
+      height: 100%; /* Match the height of the container */
+      border-radius: 3px;
+      object-fit: cover; /* Maintain aspect ratio and crop overflow */
+      
+    }
+
+    /* Text Section Styling */
+    .text-section {
+      width: 40%; /* Text section width */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .text {
+      font-size: 18px;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    .text h2 {
+      font-size: 24px;
+      margin-bottom: 1rem;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="child child1">
+      <div class="image-section"><img src="./assets/karak_honeyHome.webp" alt="Karak Honey Home"></div>
+      <div class="text-section">
+        <h2>A Sign of Sweet Beginnings</h2>
+        <p>In the rugged hills of KP Karak, a wooden sign sways in the breeze, reading: "Home of Pure Wild Honey." This marks the beginning of our story.</p>
+      </div>
+    </div>
+    <div class="child child2">
+      <div class="image-section"><img src="./assets/honey-hunt.png" alt="Honey Hunter"></div>
+      <div class="text-section">
+        <h2>The Call of the Wild Hunter</h2>
+        <p>Meet Gulab Khan, the legendary honey hunter of Karak. With wisdom passed through generations, he ventures into the wild to uncover nature's sweetest treasures.</p>
+      </div>
+    </div>
+    <div class="child child3">
+      <div class="image-section"><img src="./assets/honey-harvest.png" alt="Harvesting Honey"></div>
+      <div class="text-section">
+        <h2>The Golden Harvest</h2>
+        <p>Gulab Khan carefully ascends a steep cliff, harvesting golden honeycomb from a thriving beehive, a testament to nature's raw and unyielding bounty.</p>
+      </div>
+    </div>
+    <div class="child child4">
+      <div class="image-section"><img src="./assets/call.png" alt="Partnership with Nature"></div>
+      <div class="text-section">
+        <h2>A Trusted Partnership</h2>
+        <p>With his harvest in hand, Gulab Khan reaches out to us, forging a bridge between the purity of nature and our promise to deliver it to you.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Line Animation</title>
+  <style>
+    /* General Reset */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Parent Section */
+    .parent {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 6rem; /* Space between child sections */
+      margin: 0 auto;
+      width: 75%; /* Parent width */
+      margin-top: 80px;
+      padding: 40px;
+    }
+
+    /* Line Styling */
+    .scroll-line {
+      position: fixed;
+      top: 0;
+      left: 5%; /* Adjust to align with the parent container */
+      width: 5px;
+      background-color: #8b4513; /* Brown color for the line */
+      height: 0; /* Initial height */
+      transition: height 0.1s ease-out;
+    }
+
+    /* General Child Section Styling */
+    .child {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%; /* Child takes full width of parent */
+      gap: 5rem; /* Space between image and text sections */
+    }
+
+    /* Alternate Layout: Reverse Direction for Even Children */
+    .child:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    /* Image Section Styling */
+    .image-section {
+      width: 45%; /* Image section width */
+      height: 350px; /* Fixed height for image container */
+    }
+
+    .image-section img {
+      width: 100%; /* Make image fill its container */
+      height: 100%; /* Match the height of the container */
+      border-radius: 3px;
+      object-fit: cover; /* Maintain aspect ratio and crop overflow */
+    }
+
+    /* Text Section Styling */
+    .text-section {
+      width: 40%; /* Text section width */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .text {
+      font-size: 18px;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    .text h2 {
+      font-size: 24px;
+      margin-bottom: 1rem;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+  <div class="scroll-line" id="scroll-line"></div>
+  <div class="parent">
+    <div class="child child1">
+      <div class="image-section"><img src="./assets/karak_honeyHome.webp" alt="Karak Honey Home"></div>
+      <div class="text-section">
+        <h2>A Sign of Sweet Beginnings</h2>
+        <p>In the rugged hills of KP Karak, a wooden sign sways in the breeze, reading: "Home of Pure Wild Honey." This marks the beginning of our story.</p>
+      </div>
+    </div>
+    <div class="child child2">
+      <div class="image-section"><img src="./assets/honey-hunt.png" alt="Honey Hunter"></div>
+      <div class="text-section">
+        <h2>The Call of the Wild Hunter</h2>
+        <p>Meet Gulab Khan, the legendary honey hunter of Karak. With wisdom passed through generations, he ventures into the wild to uncover nature's sweetest treasures.</p>
+      </div>
+    </div>
+    <div class="child child3">
+      <div class="image-section"><img src="./assets/honey-harvest.png" alt="Harvesting Honey"></div>
+      <div class="text-section">
+        <h2>The Golden Harvest</h2>
+        <p>Gulab Khan carefully ascends a steep cliff, harvesting golden honeycomb from a thriving beehive, a testament to nature's raw and unyielding bounty.</p>
+      </div>
+    </div>
+    <div class="child child4">
+      <div class="image-section"><img src="./assets/call.png" alt="Partnership with Nature"></div>
+      <div class="text-section">
+        <h2>A Trusted Partnership</h2>
+        <p>With his harvest in hand, Gulab Khan reaches out to us, forging a bridge between the purity of nature and our promise to deliver it to you.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const scrollLine = document.getElementById('scroll-line');
+    const totalHeight = document.body.scrollHeight - window.innerHeight;
+
+    window.addEventListener('scroll', () => {
+      const scrollPosition = window.scrollY;
+      const scrollPercentage = (scrollPosition / totalHeight) * 100;
+      const newHeight = (scrollPercentage * window.innerHeight) / 100;
+      scrollLine.style.height = `${newHeight}px`;
+    });
+  </script>
+</body>
+</html>
+
